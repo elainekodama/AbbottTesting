@@ -18,7 +18,8 @@ ${loginErrText}          There was a problem with your email/password combinatio
 
 
 *** Keywords ***
-
+#check elements
+#
 fill login
     [Arguments]     ${username}     ${password}
     #fill text fields and submit
@@ -32,16 +33,16 @@ invalid email
     input text                          ${emailTextField}       ${emailInput}
     #click password, then go back to email
     click element                       ${passwordTextField}
-    check if error message is correct   ${emailErrMessage}      ${invalidEmail}
+    check if element text is correct    ${emailErrMessage}      ${invalidEmail}
     click element                       ${emailTextField}
-    check if error message is correct   ${passwordErrMessage}   ${requiredpassword}
+    check if element text is correct    ${passwordErrMessage}   ${requiredpassword}
     #enter password, check that email is still invalid
     input text                          ${passwordTextField}    ${validPassword}
-    check if error message is correct   ${emailErrMessage}      ${invalidEmail}
+    check if element text is correct    ${emailErrMessage}      ${invalidEmail}
 
 go to next page
-    [Arguments]     ${title}
+    [Arguments]     ${nextPageTitle}
     input text      ${emailTextField}       ${validUsername}
     input password  ${passwordTextField}    ${validPassword}
     click button    ${loginSubmit}
-    wait until element is visible  ${title}
+    wait until element is visible  ${nextPageTitle}

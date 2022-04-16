@@ -11,6 +11,9 @@ ${acceptCookies}            id:truste-consent-button
 ${rejectCookies}            id:truste-consent-required
 ${xcookies}                 id:truste-consent-close
 #country and language
+#elements
+${navBarElementIDs}       Create List     id:loginHeader-link       id:loginHeader-patients-learnMore-link       id:loginHeader-pro-learnMore-link
+
 ${dropdownMenus}            css:.floating-label
 ${selectCountryID}          id:country-select
 ${countryError}             id:country-select-error-text

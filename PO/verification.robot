@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Page objects and keywords for the cookies popup and the country/language selection page
+Documentation   Page objects and keywords for the 2-Factor Authorization page
 Library         SeleniumLibrary
 Resource        ../PO/resources.robot
 
@@ -44,13 +44,13 @@ go back
 no verification code
     click element                                 ${codeTextField}
     click element                                 ${enterCodeTitle}     #click away
-    resources.check if error message is correct   ${verifyCodeErrText}  ${noCodeErr}
+    resources.check if element text is correct    ${verifyCodeErrText}  ${noCodeErr}
     element should be disabled                    ${verifyCodeButton}
 #code is not enough digits
 invalid verification code
     input text                                    ${codeTextField}    ${invalidCode}
     click element                                 ${enterCodeTitle}   #click away
-    resources.check if error message is correct   ${verifyCodeErrText}     ${invalidCodeErr}
+    resources.check if element text is correct    ${verifyCodeErrText}     ${invalidCodeErr}
     element should be disabled                    ${verifyCodeButton}
 #code is just wrong
 wrong verification code
@@ -58,4 +58,4 @@ wrong verification code
     input text                                    ${codeTextField}        ${wrongCode}
     element should be enabled                     ${verifyCodeButton}
     click button                                  ${verifyCodeButton}
-    resources.check if error message is correct   ${verifyCodeErrText}    ${invalidCodeErr}
+    resources.check if element text is correct    ${verifyCodeErrText}    ${invalidCodeErr}

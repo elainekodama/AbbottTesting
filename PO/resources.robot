@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   Validate the LibreView login
+Documentation   Page objects and keywords for generic page actions
 Library         SeleniumLibrary
 
 *** Variables ***
@@ -22,13 +22,22 @@ ${noCaps}            p@ssword$1234
 
 ${correctCountry}    US
 ${correctLanguage}   en-US
+${wrongLanguage}     es-ES
+${corrTitleText}     Member Login
+${incorrTitleText}   Inicio de sesión para miembros
 
 *** Keywords ***
 open browser
     Create Webdriver    ${browser}  executable_path=${driverPath}
     Go to               ${mainURL}
 
-check if error message is correct
+check if element text is correct
     [Arguments]      ${element}     ${text}
     wait until element is visible   ${element}
     element text should be          ${element}  ${text}
+
+check elements
+    [Arguments]     ${expectedList}     ${actualList}
+#    for ${element} in ${actualList}
+#
+#    end
