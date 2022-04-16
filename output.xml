@@ -1,0 +1,2310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on darwin)" generated="20220416 06:17:58.885" rpa="false" schemaversion="3">
+<suite id="s1" name="Libre-View-Tests" source="/Users/elainekodama/Desktop/Abbott-Tests/tests/libre-view-tests.robot">
+<test id="s1-t1" name="Manage Cookies" line="20">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:17:58.980" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:17:58.980" endtime="20220416 06:18:10.093"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:18:10.094" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:18:10.093" endtime="20220416 06:18:12.364"/>
+</kw>
+<status status="PASS" starttime="20220416 06:17:58.980" endtime="20220416 06:18:12.364"/>
+</kw>
+<kw name="cookies popup" library="country-language">
+<arg>${manageCookies}</arg>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${manageCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:12.628" level="INFO">Current page contains button 'id:truste-show-consent'.</msg>
+<status status="PASS" starttime="20220416 06:18:12.365" endtime="20220416 06:18:12.628"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:12.660" level="INFO">Current page contains button 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:18:12.628" endtime="20220416 06:18:12.660"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${rejectCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:12.685" level="INFO">Current page contains button 'id:truste-consent-required'.</msg>
+<status status="PASS" starttime="20220416 06:18:12.660" endtime="20220416 06:18:12.685"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xcookies}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220416 06:18:12.691" level="INFO">Current page contains element 'id:truste-consent-close'.</msg>
+<status status="PASS" starttime="20220416 06:18:12.685" endtime="20220416 06:18:12.691"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesElement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:18:12.691" level="INFO">Clicking element 'id:truste-show-consent'.</msg>
+<status status="PASS" starttime="20220416 06:18:12.691" endtime="20220416 06:18:14.900"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:18:14.900" endtime="20220416 06:18:14.948"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220416 06:18:14.948" endtime="20220416 06:18:14.966"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:12.364" endtime="20220416 06:18:14.966"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id: ta-overlay-content</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220416 06:18:20.220" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220416 06:18:20.221" level="FAIL">Element 'id: ta-overlay-content' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220416 06:18:14.966" endtime="20220416 06:18:20.223"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id: pop-close05795951636713843</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220416 06:18:20.223" endtime="20220416 06:18:20.223"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>id: ta-overlay-content</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" starttime="20220416 06:18:20.223" endtime="20220416 06:18:20.223"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220416 06:18:20.223" endtime="20220416 06:18:20.223"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:18:20.223" endtime="20220416 06:18:20.290"/>
+</kw>
+<status status="FAIL" starttime="20220416 06:17:58.980" endtime="20220416 06:18:20.290">Element 'id: ta-overlay-content' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Allow Cookies" line="28">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:18:20.291" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:18:20.291" endtime="20220416 06:18:26.856"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:18:26.857" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:18:26.856" endtime="20220416 06:18:29.016"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:20.291" endtime="20220416 06:18:29.016"/>
+</kw>
+<kw name="cookies popup" library="country-language">
+<arg>${acceptCookies}</arg>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${manageCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:29.366" level="INFO">Current page contains button 'id:truste-show-consent'.</msg>
+<status status="PASS" starttime="20220416 06:18:29.017" endtime="20220416 06:18:29.366"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:29.396" level="INFO">Current page contains button 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:18:29.366" endtime="20220416 06:18:29.396"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${rejectCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:29.411" level="INFO">Current page contains button 'id:truste-consent-required'.</msg>
+<status status="PASS" starttime="20220416 06:18:29.396" endtime="20220416 06:18:29.411"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xcookies}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220416 06:18:29.417" level="INFO">Current page contains element 'id:truste-consent-close'.</msg>
+<status status="PASS" starttime="20220416 06:18:29.411" endtime="20220416 06:18:29.417"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesElement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:18:29.417" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:18:29.417" endtime="20220416 06:18:31.247"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:18:31.247" endtime="20220416 06:18:31.870"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220416 06:18:31.870" endtime="20220416 06:18:31.889"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:29.017" endtime="20220416 06:18:31.889"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:18:31.889" endtime="20220416 06:18:31.952"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:20.290" endtime="20220416 06:18:31.952"/>
+</test>
+<test id="s1-t3" name="Reject Cookies" line="31">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:18:31.953" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:18:31.953" endtime="20220416 06:18:38.557"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:18:38.557" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:18:38.557" endtime="20220416 06:18:41.746"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:31.952" endtime="20220416 06:18:41.746"/>
+</kw>
+<kw name="cookies popup" library="country-language">
+<arg>${rejectCookies}</arg>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${manageCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:42.170" level="INFO">Current page contains button 'id:truste-show-consent'.</msg>
+<status status="PASS" starttime="20220416 06:18:41.747" endtime="20220416 06:18:42.170"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:42.196" level="INFO">Current page contains button 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:18:42.171" endtime="20220416 06:18:42.196"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${rejectCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:42.210" level="INFO">Current page contains button 'id:truste-consent-required'.</msg>
+<status status="PASS" starttime="20220416 06:18:42.197" endtime="20220416 06:18:42.210"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xcookies}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220416 06:18:42.216" level="INFO">Current page contains element 'id:truste-consent-close'.</msg>
+<status status="PASS" starttime="20220416 06:18:42.211" endtime="20220416 06:18:42.216"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesElement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:18:42.216" level="INFO">Clicking element 'id:truste-consent-required'.</msg>
+<status status="PASS" starttime="20220416 06:18:42.216" endtime="20220416 06:18:42.406"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:18:42.406" endtime="20220416 06:18:44.532"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220416 06:18:44.532" endtime="20220416 06:18:44.550"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:41.747" endtime="20220416 06:18:44.550"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:18:44.551" endtime="20220416 06:18:44.615"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:31.952" endtime="20220416 06:18:44.615"/>
+</test>
+<test id="s1-t4" name="Close Cookies" line="34">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:18:44.616" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:18:44.616" endtime="20220416 06:18:51.289"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:18:51.290" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:18:51.290" endtime="20220416 06:18:53.949"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:44.616" endtime="20220416 06:18:53.949"/>
+</kw>
+<kw name="cookies popup" library="country-language">
+<arg>${xCookies}</arg>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${manageCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:54.249" level="INFO">Current page contains button 'id:truste-show-consent'.</msg>
+<status status="PASS" starttime="20220416 06:18:53.950" endtime="20220416 06:18:54.250"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:54.277" level="INFO">Current page contains button 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:18:54.250" endtime="20220416 06:18:54.277"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>${rejectCookies}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<msg timestamp="20220416 06:18:54.295" level="INFO">Current page contains button 'id:truste-consent-required'.</msg>
+<status status="PASS" starttime="20220416 06:18:54.277" endtime="20220416 06:18:54.295"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xcookies}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220416 06:18:54.301" level="INFO">Current page contains element 'id:truste-consent-close'.</msg>
+<status status="PASS" starttime="20220416 06:18:54.295" endtime="20220416 06:18:54.301"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookiesElement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:18:54.302" level="INFO">Clicking element 'id:truste-consent-close'.</msg>
+<status status="PASS" starttime="20220416 06:18:54.302" endtime="20220416 06:18:54.509"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:18:54.509" endtime="20220416 06:18:56.716"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220416 06:18:56.716" endtime="20220416 06:18:56.735"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:53.950" endtime="20220416 06:18:56.735"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:18:56.736" endtime="20220416 06:18:56.803"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:44.615" endtime="20220416 06:18:56.803"/>
+</test>
+<test id="s1-t5" name="Correct Country and Language" line="40">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:18:56.804" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:18:56.804" endtime="20220416 06:19:03.958"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:19:03.960" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:19:03.959" endtime="20220416 06:19:05.981"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:56.803" endtime="20220416 06:19:05.981"/>
+</kw>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:05.982" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:05.982" endtime="20220416 06:19:08.367"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:05.982" endtime="20220416 06:19:08.368"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:08.368" endtime="20220416 06:19:08.760"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:19:08.762" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:19:08.760" endtime="20220416 06:19:08.762"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:05.981" endtime="20220416 06:19:08.762"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:19:08.762" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:19:08.762" endtime="20220416 06:19:08.970"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:19:08.970" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:19:08.970" endtime="20220416 06:19:09.026"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:09.026" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:09.026" endtime="20220416 06:19:09.190"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${loginTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:09.190" endtime="20220416 06:19:10.682"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:19:10.684" level="INFO">Current location is 'https://www.libreview.com/'.</msg>
+<status status="PASS" starttime="20220416 06:19:10.682" endtime="20220416 06:19:10.684"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:19:10.685" endtime="20220416 06:19:10.748"/>
+</kw>
+<status status="PASS" starttime="20220416 06:18:56.803" endtime="20220416 06:19:10.748"/>
+</test>
+<test id="s1-t6" name="Submit with No Country" line="49">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:19:10.750" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:19:10.750" endtime="20220416 06:19:18.511"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:19:18.512" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:19:18.512" endtime="20220416 06:19:20.918"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:10.749" endtime="20220416 06:19:20.918"/>
+</kw>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:20.919" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:20.919" endtime="20220416 06:19:23.073"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:20.918" endtime="20220416 06:19:23.073"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:23.073" endtime="20220416 06:19:23.701"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:19:23.703" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:19:23.701" endtime="20220416 06:19:23.703"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:20.918" endtime="20220416 06:19:23.703"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:23.704" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:23.703" endtime="20220416 06:19:23.903"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${countryError}</arg>
+<arg>${countryErrorMessage}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:23.903" endtime="20220416 06:19:23.922"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:19:23.923" level="INFO">Verifying element 'id:country-select-error-text' contains exact text 'You must select a Country / Region of Residence'.</msg>
+<status status="PASS" starttime="20220416 06:19:23.923" endtime="20220416 06:19:23.938"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:23.903" endtime="20220416 06:19:23.938"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:19:23.940" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:19:23.938" endtime="20220416 06:19:23.940"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:19:23.941" endtime="20220416 06:19:24.005"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:10.749" endtime="20220416 06:19:24.005"/>
+</test>
+<test id="s1-t7" name="No Email or Password" line="62">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:19:24.006" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:19:24.006" endtime="20220416 06:19:30.529"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:19:30.530" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:19:30.529" endtime="20220416 06:19:34.913"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:24.006" endtime="20220416 06:19:34.913"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:34.914" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:34.914" endtime="20220416 06:19:35.131"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:34.914" endtime="20220416 06:19:35.131"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:35.132" endtime="20220416 06:19:37.905"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:19:37.907" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:19:37.905" endtime="20220416 06:19:37.907"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:34.914" endtime="20220416 06:19:37.907"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:19:37.908" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:19:37.908" endtime="20220416 06:19:38.029"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:19:38.030" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:19:38.029" endtime="20220416 06:19:38.053"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:38.053" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:38.053" endtime="20220416 06:19:38.208"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:38.208" endtime="20220416 06:19:39.409"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:34.913" endtime="20220416 06:19:39.409"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:39.409" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:39.409" endtime="20220416 06:19:39.842"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${requiredEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:39.842" endtime="20220416 06:19:39.862"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:19:39.862" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is required'.</msg>
+<status status="PASS" starttime="20220416 06:19:39.862" endtime="20220416 06:19:39.881"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:39.842" endtime="20220416 06:19:39.881"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${passwordErrMessage}</arg>
+<arg>${requiredpassword}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:39.881" endtime="20220416 06:19:39.896"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:19:39.897" level="INFO">Verifying element 'id:loginForm-password-input-error-text' contains exact text 'Password is required'.</msg>
+<status status="PASS" starttime="20220416 06:19:39.897" endtime="20220416 06:19:39.944"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:39.881" endtime="20220416 06:19:39.944"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:19:39.944" endtime="20220416 06:19:40.007"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:24.005" endtime="20220416 06:19:40.007"/>
+</test>
+<test id="s1-t8" name="No Email, Type Password" line="68">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:19:40.008" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:19:40.008" endtime="20220416 06:19:46.443"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:19:46.444" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:19:46.444" endtime="20220416 06:19:48.857"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:40.008" endtime="20220416 06:19:48.857"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:48.858" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:48.858" endtime="20220416 06:19:50.751"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:48.858" endtime="20220416 06:19:50.752"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:50.752" endtime="20220416 06:19:51.419"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:19:51.422" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:19:51.419" endtime="20220416 06:19:51.422"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:48.858" endtime="20220416 06:19:51.422"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:19:51.422" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:19:51.422" endtime="20220416 06:19:51.639"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:19:51.639" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:19:51.639" endtime="20220416 06:19:51.711"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:51.711" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:19:51.711" endtime="20220416 06:19:51.869"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:51.869" endtime="20220416 06:19:52.983"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:48.857" endtime="20220416 06:19:52.983"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:19:52.983" level="INFO">Typing text 'P@ssword$12' into text field 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:19:52.983" endtime="20220416 06:19:54.044"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${requiredEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:19:54.044" endtime="20220416 06:19:54.287"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:19:54.287" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is required'.</msg>
+<status status="PASS" starttime="20220416 06:19:54.287" endtime="20220416 06:19:54.325"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:54.044" endtime="20220416 06:19:54.325"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:19:54.325" endtime="20220416 06:19:54.392"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:40.007" endtime="20220416 06:19:54.392"/>
+</test>
+<test id="s1-t9" name="No Password, Type Email" line="74">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:19:54.393" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:19:54.393" endtime="20220416 06:20:01.052"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:20:01.053" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:20:01.052" endtime="20220416 06:20:03.802"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:54.392" endtime="20220416 06:20:03.802"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:03.803" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:03.803" endtime="20220416 06:20:04.730"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:03.803" endtime="20220416 06:20:04.731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:04.731" endtime="20220416 06:20:06.534"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:20:06.537" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:20:06.534" endtime="20220416 06:20:06.537"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:03.803" endtime="20220416 06:20:06.537"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:06.537" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:20:06.537" endtime="20220416 06:20:06.639"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:06.639" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:20:06.639" endtime="20220416 06:20:06.661"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:06.661" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:06.661" endtime="20220416 06:20:06.819"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:06.819" endtime="20220416 06:20:07.981"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:03.803" endtime="20220416 06:20:07.981"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${validUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:07.981" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:07.981" endtime="20220416 06:20:09.337"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:09.338" level="INFO">Clicking element 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:09.338" endtime="20220416 06:20:09.483"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginTitle}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:09.484" level="INFO">Clicking element 'id:login-title-text'.</msg>
+<status status="PASS" starttime="20220416 06:20:09.483" endtime="20220416 06:20:09.815"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${passwordErrMessage}</arg>
+<arg>${requiredpassword}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:09.815" endtime="20220416 06:20:09.828"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:09.829" level="INFO">Verifying element 'id:loginForm-password-input-error-text' contains exact text 'Password is required'.</msg>
+<status status="PASS" starttime="20220416 06:20:09.828" endtime="20220416 06:20:09.842"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:09.815" endtime="20220416 06:20:09.842"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:20:09.843" endtime="20220416 06:20:09.907"/>
+</kw>
+<status status="PASS" starttime="20220416 06:19:54.392" endtime="20220416 06:20:09.907"/>
+</test>
+<test id="s1-t10" name="Invalid Email-- no @" line="83">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:20:09.908" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:20:09.908" endtime="20220416 06:20:18.271"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:20:18.272" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:20:18.271" endtime="20220416 06:20:21.583"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:09.908" endtime="20220416 06:20:21.583"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:21.584" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:21.584" endtime="20220416 06:20:22.057"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:21.584" endtime="20220416 06:20:22.057"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:22.057" endtime="20220416 06:20:24.013"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:20:24.015" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:20:24.013" endtime="20220416 06:20:24.015"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:21.584" endtime="20220416 06:20:24.015"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:24.016" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:20:24.015" endtime="20220416 06:20:24.123"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:24.123" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:20:24.123" endtime="20220416 06:20:24.145"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:24.146" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:24.146" endtime="20220416 06:20:24.318"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:24.318" endtime="20220416 06:20:25.827"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:21.583" endtime="20220416 06:20:25.827"/>
+</kw>
+<kw name="invalid email" library="login">
+<arg>${noAtSign}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${emailInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:25.828" level="INFO">Typing text 'codechallengeadcoutlook' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:25.828" endtime="20220416 06:20:27.102"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:27.102" level="INFO">Clicking element 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:27.102" endtime="20220416 06:20:27.216"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:27.216" endtime="20220416 06:20:27.232"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:27.232" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:20:27.232" endtime="20220416 06:20:27.246"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:27.216" endtime="20220416 06:20:27.246"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:27.246" level="INFO">Clicking element 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:27.246" endtime="20220416 06:20:27.325"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${passwordErrMessage}</arg>
+<arg>${requiredpassword}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:27.325" endtime="20220416 06:20:27.341"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:27.341" level="INFO">Verifying element 'id:loginForm-password-input-error-text' contains exact text 'Password is required'.</msg>
+<status status="PASS" starttime="20220416 06:20:27.341" endtime="20220416 06:20:27.357"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:27.325" endtime="20220416 06:20:27.357"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:27.357" level="INFO">Typing text 'P@ssword$12' into text field 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:27.357" endtime="20220416 06:20:27.566"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:27.566" endtime="20220416 06:20:27.664"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:27.665" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:20:27.665" endtime="20220416 06:20:27.683"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:27.566" endtime="20220416 06:20:27.684"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:25.827" endtime="20220416 06:20:27.684"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:20:27.684" endtime="20220416 06:20:27.747"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:09.907" endtime="20220416 06:20:27.747"/>
+</test>
+<test id="s1-t11" name="Invalid Email-- no ." line="87">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:20:27.749" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:20:27.748" endtime="20220416 06:20:34.362"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:20:34.363" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:20:34.362" endtime="20220416 06:20:36.947"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:27.748" endtime="20220416 06:20:36.947"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:36.948" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:36.948" endtime="20220416 06:20:38.896"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:36.948" endtime="20220416 06:20:38.896"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:38.897" endtime="20220416 06:20:39.435"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:20:39.437" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:20:39.435" endtime="20220416 06:20:39.437"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:36.947" endtime="20220416 06:20:39.437"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:39.438" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:20:39.437" endtime="20220416 06:20:39.603"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:39.604" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:20:39.603" endtime="20220416 06:20:39.682"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:39.682" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:39.682" endtime="20220416 06:20:39.856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:39.856" endtime="20220416 06:20:41.367"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:36.947" endtime="20220416 06:20:41.367"/>
+</kw>
+<kw name="invalid email" library="login">
+<arg>${noPeriod}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${emailInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:41.368" level="INFO">Typing text 'codechallengeadc@outlookcom' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:41.367" endtime="20220416 06:20:42.655"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:42.655" level="INFO">Clicking element 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:42.655" endtime="20220416 06:20:42.772"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:42.773" endtime="20220416 06:20:42.788"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:42.788" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:20:42.788" endtime="20220416 06:20:42.803"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:42.772" endtime="20220416 06:20:42.803"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:42.803" level="INFO">Clicking element 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:42.803" endtime="20220416 06:20:42.855"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${passwordErrMessage}</arg>
+<arg>${requiredpassword}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:42.856" endtime="20220416 06:20:42.869"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:42.869" level="INFO">Verifying element 'id:loginForm-password-input-error-text' contains exact text 'Password is required'.</msg>
+<status status="PASS" starttime="20220416 06:20:42.869" endtime="20220416 06:20:42.886"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:42.855" endtime="20220416 06:20:42.886"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:42.887" level="INFO">Typing text 'P@ssword$12' into text field 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:42.886" endtime="20220416 06:20:43.187"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:43.188" endtime="20220416 06:20:43.196"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:43.196" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:20:43.196" endtime="20220416 06:20:43.205"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:43.188" endtime="20220416 06:20:43.205"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:41.367" endtime="20220416 06:20:43.205"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:20:43.205" endtime="20220416 06:20:43.270"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:27.748" endtime="20220416 06:20:43.270"/>
+</test>
+<test id="s1-t12" name="Invalid Email-- no @, .com" line="91">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:20:43.271" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:20:43.271" endtime="20220416 06:20:49.990"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:20:49.991" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:20:49.991" endtime="20220416 06:20:52.192"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:43.271" endtime="20220416 06:20:52.193"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:52.194" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:52.193" endtime="20220416 06:20:54.369"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:52.193" endtime="20220416 06:20:54.369"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:54.369" endtime="20220416 06:20:54.984"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:20:54.987" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:20:54.984" endtime="20220416 06:20:54.987"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:52.193" endtime="20220416 06:20:54.987"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:54.987" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:20:54.987" endtime="20220416 06:20:55.207"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:20:55.207" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:20:55.207" endtime="20220416 06:20:55.250"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:55.250" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:20:55.250" endtime="20220416 06:20:55.402"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:55.402" endtime="20220416 06:20:56.626"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:52.193" endtime="20220416 06:20:56.626"/>
+</kw>
+<kw name="invalid email" library="login">
+<arg>${noAtOrPeriod}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${emailInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:56.627" level="INFO">Typing text 'codechallengeadcoutlookcom' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:56.626" endtime="20220416 06:20:57.911"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:57.911" level="INFO">Clicking element 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:57.911" endtime="20220416 06:20:58.093"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:58.094" endtime="20220416 06:20:58.109"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:58.109" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:20:58.109" endtime="20220416 06:20:58.123"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:58.094" endtime="20220416 06:20:58.124"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:58.124" level="INFO">Clicking element 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:58.124" endtime="20220416 06:20:58.176"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${passwordErrMessage}</arg>
+<arg>${requiredpassword}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:58.177" endtime="20220416 06:20:58.192"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:58.192" level="INFO">Verifying element 'id:loginForm-password-input-error-text' contains exact text 'Password is required'.</msg>
+<status status="PASS" starttime="20220416 06:20:58.192" endtime="20220416 06:20:58.207"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:58.177" endtime="20220416 06:20:58.207"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:20:58.208" level="INFO">Typing text 'P@ssword$12' into text field 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:20:58.207" endtime="20220416 06:20:58.497"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:20:58.498" endtime="20220416 06:20:58.507"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:20:58.508" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:20:58.507" endtime="20220416 06:20:58.515"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:58.497" endtime="20220416 06:20:58.515"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:56.626" endtime="20220416 06:20:58.515"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:20:58.515" endtime="20220416 06:20:58.579"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:43.271" endtime="20220416 06:20:58.579"/>
+</test>
+<test id="s1-t13" name="Invalid Email-- no outlook" line="95">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:20:58.580" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:20:58.580" endtime="20220416 06:21:05.420"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:21:05.420" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:21:05.420" endtime="20220416 06:21:07.781"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:58.580" endtime="20220416 06:21:07.781"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:07.782" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:07.782" endtime="20220416 06:21:09.793"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:07.782" endtime="20220416 06:21:09.793"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:09.793" endtime="20220416 06:21:10.436"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:21:10.438" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:21:10.436" endtime="20220416 06:21:10.438"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:07.782" endtime="20220416 06:21:10.439"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:21:10.439" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:21:10.439" endtime="20220416 06:21:10.537"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:21:10.537" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:21:10.537" endtime="20220416 06:21:10.560"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:10.561" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:10.560" endtime="20220416 06:21:10.727"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:10.727" endtime="20220416 06:21:11.875"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:07.781" endtime="20220416 06:21:11.875"/>
+</kw>
+<kw name="invalid email" library="login">
+<arg>${noOutlook}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${emailInput}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:11.876" level="INFO">Typing text 'codechallengeadc@com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:21:11.876" endtime="20220416 06:21:12.983"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:12.983" level="INFO">Clicking element 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:21:12.983" endtime="20220416 06:21:13.272"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:13.273" endtime="20220416 06:21:13.289"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:21:13.290" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:21:13.289" endtime="20220416 06:21:13.304"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:13.273" endtime="20220416 06:21:13.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:13.304" level="INFO">Clicking element 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:21:13.304" endtime="20220416 06:21:13.354"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${passwordErrMessage}</arg>
+<arg>${requiredpassword}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:13.354" endtime="20220416 06:21:13.371"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:21:13.371" level="INFO">Verifying element 'id:loginForm-password-input-error-text' contains exact text 'Password is required'.</msg>
+<status status="PASS" starttime="20220416 06:21:13.371" endtime="20220416 06:21:13.385"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:13.354" endtime="20220416 06:21:13.385"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:13.385" level="INFO">Typing text 'P@ssword$12' into text field 'id: loginForm-password-input'.</msg>
+<status status="PASS" starttime="20220416 06:21:13.385" endtime="20220416 06:21:13.525"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${emailErrMessage}</arg>
+<arg>${invalidEmail}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:13.526" endtime="20220416 06:21:13.625"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:21:13.625" level="INFO">Verifying element 'id:loginForm-email-input-error-text' contains exact text 'Email address is invalid'.</msg>
+<status status="PASS" starttime="20220416 06:21:13.625" endtime="20220416 06:21:13.686"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:13.525" endtime="20220416 06:21:13.686"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:11.875" endtime="20220416 06:21:13.686"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:21:13.687" endtime="20220416 06:21:13.774"/>
+</kw>
+<status status="PASS" starttime="20220416 06:20:58.579" endtime="20220416 06:21:13.774"/>
+</test>
+<test id="s1-t14" name="Correct email, wrong password" line="99">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:21:13.775" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:21:13.775" endtime="20220416 06:21:22.410"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:21:22.411" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:21:22.411" endtime="20220416 06:21:24.427"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:13.775" endtime="20220416 06:21:24.427"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:24.428" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:24.428" endtime="20220416 06:21:26.728"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:24.428" endtime="20220416 06:21:26.728"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:26.728" endtime="20220416 06:21:27.301"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:21:27.303" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:21:27.301" endtime="20220416 06:21:27.303"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:24.428" endtime="20220416 06:21:27.303"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:21:27.304" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:21:27.304" endtime="20220416 06:21:27.521"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:21:27.522" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:21:27.521" endtime="20220416 06:21:27.570"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:27.571" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:27.570" endtime="20220416 06:21:27.731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:27.731" endtime="20220416 06:21:29.171"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:24.427" endtime="20220416 06:21:29.171"/>
+</kw>
+<kw name="fill login" library="login">
+<arg>${valid_username}</arg>
+<arg>${wrongPassword}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:29.172" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:21:29.171" endtime="20220416 06:21:30.587"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:30.588" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:21:30.798" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:21:31.185" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:21:30.587" endtime="20220416 06:21:31.186"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:31.187" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:31.187" endtime="20220416 06:21:31.434"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:29.171" endtime="20220416 06:21:31.435"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${loginErrMessage}</arg>
+<arg>${loginErrText}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:31.435" endtime="20220416 06:21:33.812"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:21:33.812" level="INFO">Verifying element 'id:error-message-text' contains exact text 'There was a problem with your email/password combination. Please try again.'.</msg>
+<status status="PASS" starttime="20220416 06:21:33.812" endtime="20220416 06:21:33.826"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:31.435" endtime="20220416 06:21:33.827"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:21:33.827" endtime="20220416 06:21:33.890"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:13.774" endtime="20220416 06:21:33.891"/>
+</test>
+<test id="s1-t15" name="Correct email, password wrong caps" line="104">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:21:33.892" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:21:33.892" endtime="20220416 06:21:39.813"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:21:39.814" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:21:39.814" endtime="20220416 06:21:41.993"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:33.891" endtime="20220416 06:21:41.993"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:41.994" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:41.994" endtime="20220416 06:21:43.919"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:41.994" endtime="20220416 06:21:43.919"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:43.919" endtime="20220416 06:21:44.591"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:21:44.594" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:21:44.592" endtime="20220416 06:21:44.594"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:41.994" endtime="20220416 06:21:44.594"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:21:44.594" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:21:44.594" endtime="20220416 06:21:44.809"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:21:44.809" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:21:44.809" endtime="20220416 06:21:44.861"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:44.861" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:44.861" endtime="20220416 06:21:45.021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:45.021" endtime="20220416 06:21:46.115"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:41.993" endtime="20220416 06:21:46.115"/>
+</kw>
+<kw name="fill login" library="login">
+<arg>${valid_username}</arg>
+<arg>${noCaps}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:46.116" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:21:46.116" endtime="20220416 06:21:47.435"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:47.436" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:21:47.500" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:21:47.712" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:21:47.435" endtime="20220416 06:21:47.712"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:47.712" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:47.712" endtime="20220416 06:21:47.952"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:46.115" endtime="20220416 06:21:47.952"/>
+</kw>
+<kw name="check if error message is correct" library="resources">
+<arg>${loginErrMessage}</arg>
+<arg>${loginErrText}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:21:47.952" endtime="20220416 06:21:50.542"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220416 06:21:50.543" level="INFO">Verifying element 'id:error-message-text' contains exact text 'There was a problem with your email/password combination. Please try again.'.</msg>
+<status status="PASS" starttime="20220416 06:21:50.542" endtime="20220416 06:21:50.559"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:47.952" endtime="20220416 06:21:50.559"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:21:50.559" endtime="20220416 06:21:50.624"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:33.891" endtime="20220416 06:21:50.624"/>
+</test>
+<test id="s1-t16" name="Successful Login" line="109">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:21:50.625" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:21:50.625" endtime="20220416 06:21:57.098"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:21:57.099" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:21:57.098" endtime="20220416 06:21:59.289"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:50.625" endtime="20220416 06:21:59.289"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:21:59.291" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:21:59.290" endtime="20220416 06:22:01.516"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:59.290" endtime="20220416 06:22:01.516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:01.516" endtime="20220416 06:22:02.113"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:22:02.115" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:22:02.113" endtime="20220416 06:22:02.116"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:59.290" endtime="20220416 06:22:02.116"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:02.116" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:22:02.116" endtime="20220416 06:22:02.339"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:02.339" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:22:02.339" endtime="20220416 06:22:02.386"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:02.387" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:02.386" endtime="20220416 06:22:02.547"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:02.547" endtime="20220416 06:22:03.755"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:59.290" endtime="20220416 06:22:03.755"/>
+</kw>
+<kw name="fill login" library="login">
+<arg>${validUsername}</arg>
+<arg>${validPassword}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:03.756" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:22:03.756" endtime="20220416 06:22:05.123"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:05.123" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:22:05.179" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:22:05.359" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:22:05.123" endtime="20220416 06:22:05.360"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:05.360" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:05.360" endtime="20220416 06:22:05.624"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:03.755" endtime="20220416 06:22:05.624"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${AuthTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:05.624" endtime="20220416 06:22:06.279"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${authURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:22:06.281" level="INFO">Current location is 'https://www.libreview.com/auth/finishlogin'.</msg>
+<status status="PASS" starttime="20220416 06:22:06.279" endtime="20220416 06:22:06.281"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:22:06.281" endtime="20220416 06:22:06.346"/>
+</kw>
+<status status="PASS" starttime="20220416 06:21:50.625" endtime="20220416 06:22:06.346"/>
+</test>
+<test id="s1-t17" name="Log Out" line="118">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:22:06.347" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:22:06.347" endtime="20220416 06:22:13.510"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:22:13.511" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:22:13.511" endtime="20220416 06:22:16.143"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:06.346" endtime="20220416 06:22:16.143"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:16.145" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:16.144" endtime="20220416 06:22:16.706"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:16.144" endtime="20220416 06:22:16.706"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:16.707" endtime="20220416 06:22:18.643"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:22:18.647" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:22:18.644" endtime="20220416 06:22:18.647"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:16.144" endtime="20220416 06:22:18.647"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:18.647" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:22:18.647" endtime="20220416 06:22:18.750"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:18.751" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:22:18.750" endtime="20220416 06:22:18.778"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:18.779" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:18.778" endtime="20220416 06:22:18.935"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:18.935" endtime="20220416 06:22:20.590"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:16.144" endtime="20220416 06:22:20.590"/>
+</kw>
+<kw name="go to next page" library="login">
+<arg>${authTitle}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${validUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:20.591" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:22:20.591" endtime="20220416 06:22:22.026"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:22.026" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:22:22.051" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:22:22.286" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:22:22.026" endtime="20220416 06:22:22.286"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:22.286" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:22.286" endtime="20220416 06:22:22.510"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:22.510" endtime="20220416 06:22:22.974"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:20.590" endtime="20220416 06:22:22.974"/>
+</kw>
+<kw name="log out" library="verification">
+<arg>${loginTitle}</arg>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:22.975" level="INFO">Clicking button 'id:twoFactor-step1-back-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:22.975" endtime="20220416 06:22:23.158"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:23.158" endtime="20220416 06:22:23.167"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:22:23.169" level="INFO">Current location is 'https://www.libreview.com/'.</msg>
+<status status="PASS" starttime="20220416 06:22:23.167" endtime="20220416 06:22:23.169"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:22.974" endtime="20220416 06:22:23.169"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:22:23.169" endtime="20220416 06:22:23.237"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:06.346" endtime="20220416 06:22:23.237"/>
+</test>
+<test id="s1-t18" name="Send Code to Email 1" line="123">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:22:23.238" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:22:23.238" endtime="20220416 06:22:31.977"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:22:31.978" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:22:31.977" endtime="20220416 06:22:35.143"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:23.237" endtime="20220416 06:22:35.143"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:35.144" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:35.144" endtime="20220416 06:22:35.666"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:35.144" endtime="20220416 06:22:35.666"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:35.666" endtime="20220416 06:22:37.552"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:22:37.554" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:22:37.552" endtime="20220416 06:22:37.554"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:35.144" endtime="20220416 06:22:37.554"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:37.555" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:22:37.555" endtime="20220416 06:22:37.664"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:37.664" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:22:37.664" endtime="20220416 06:22:37.687"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:37.687" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:37.687" endtime="20220416 06:22:37.843"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:37.843" endtime="20220416 06:22:39.285"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:35.143" endtime="20220416 06:22:39.285"/>
+</kw>
+<kw name="go to next page" library="login">
+<arg>${authTitle}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${validUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:39.285" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:22:39.285" endtime="20220416 06:22:40.673"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:40.674" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:22:40.919" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:22:41.263" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:22:40.674" endtime="20220416 06:22:41.263"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:41.263" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:41.263" endtime="20220416 06:22:41.607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:41.607" endtime="20220416 06:22:42.040"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:39.285" endtime="20220416 06:22:42.040"/>
+</kw>
+<kw name="choose email to send" library="verification">
+<arg>${email1}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${emailDropdownID}</arg>
+<arg>${email}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:42.040" level="INFO">Selecting options from selection list 'id:2fa-method-select' by value email_1.</msg>
+<status status="PASS" starttime="20220416 06:22:42.040" endtime="20220416 06:22:42.062"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:42.040" endtime="20220416 06:22:42.062"/>
+</kw>
+<kw name="send code" library="verification">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sendCodeButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:42.062" level="INFO">Clicking button 'id:twoFactor-step1-next-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:42.062" endtime="20220416 06:22:42.109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${enterCodeTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:42.110" endtime="20220416 06:22:42.418"/>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>${verifyCodeButton}</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220416 06:22:42.418" endtime="20220416 06:22:42.428"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:42.062" endtime="20220416 06:22:42.428"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:22:42.428" endtime="20220416 06:22:42.492"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:23.237" endtime="20220416 06:22:42.492"/>
+</test>
+<test id="s1-t19" name="Send Code to Email 2" line="130">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:22:42.493" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:22:42.493" endtime="20220416 06:22:49.023"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:22:49.023" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:22:49.023" endtime="20220416 06:22:51.214"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:42.493" endtime="20220416 06:22:51.214"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:51.216" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:51.215" endtime="20220416 06:22:53.348"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:51.215" endtime="20220416 06:22:53.348"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:53.348" endtime="20220416 06:22:53.936"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:22:53.939" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:22:53.936" endtime="20220416 06:22:53.939"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:51.215" endtime="20220416 06:22:53.939"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:53.940" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:22:53.939" endtime="20220416 06:22:54.144"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:54.145" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:22:54.145" endtime="20220416 06:22:54.204"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:54.204" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:54.204" endtime="20220416 06:22:54.377"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:54.377" endtime="20220416 06:22:55.645"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:51.215" endtime="20220416 06:22:55.647"/>
+</kw>
+<kw name="go to next page" library="login">
+<arg>${authTitle}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${validUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:55.648" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:22:55.648" endtime="20220416 06:22:57.024"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:57.024" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:22:57.074" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:22:57.284" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:22:57.024" endtime="20220416 06:22:57.284"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:57.284" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:57.284" endtime="20220416 06:22:57.476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:57.476" endtime="20220416 06:22:57.911"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:55.647" endtime="20220416 06:22:57.911"/>
+</kw>
+<kw name="choose email to send" library="verification">
+<arg>${email2}</arg>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${emailDropdownID}</arg>
+<arg>${email}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:22:57.911" level="INFO">Selecting options from selection list 'id:2fa-method-select' by value email_2.</msg>
+<status status="PASS" starttime="20220416 06:22:57.911" endtime="20220416 06:22:57.957"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:57.911" endtime="20220416 06:22:57.957"/>
+</kw>
+<kw name="send code" library="verification">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sendCodeButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:22:57.958" level="INFO">Clicking button 'id:twoFactor-step1-next-button'.</msg>
+<status status="PASS" starttime="20220416 06:22:57.958" endtime="20220416 06:22:58.094"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${enterCodeTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:22:58.094" endtime="20220416 06:22:58.316"/>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>${verifyCodeButton}</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220416 06:22:58.316" endtime="20220416 06:22:58.329"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:57.957" endtime="20220416 06:22:58.329"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:22:58.329" endtime="20220416 06:22:58.393"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:42.492" endtime="20220416 06:22:58.393"/>
+</test>
+<test id="s1-t20" name="Check Back Button" line="137">
+<kw name="open browser" library="resources" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>${browser}</arg>
+<arg>executable_path=${driverPath}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220416 06:22:58.394" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220416 06:22:58.394" endtime="20220416 06:23:05.189"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mainURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220416 06:23:05.190" level="INFO">Opening url 'https://www.libreview.com/'</msg>
+<status status="PASS" starttime="20220416 06:23:05.189" endtime="20220416 06:23:08.685"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:58.394" endtime="20220416 06:23:08.685"/>
+</kw>
+<kw name="go to next page" library="country-language">
+<arg>${loginTitle}</arg>
+<kw name="load country and language" library="country-language">
+<kw name="pass cookies" library="country-language">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:08.687" level="INFO">Clicking element 'id:truste-consent-button'.</msg>
+<status status="PASS" starttime="20220416 06:23:08.686" endtime="20220416 06:23:08.915"/>
+</kw>
+<status status="PASS" starttime="20220416 06:23:08.686" endtime="20220416 06:23:08.915"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdownMenus}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:23:08.915" endtime="20220416 06:23:11.019"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${countryLangURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:23:11.022" level="INFO">Current location is 'https://www.libreview.com/chooseCountryLanguage'.</msg>
+<status status="PASS" starttime="20220416 06:23:11.019" endtime="20220416 06:23:11.022"/>
+</kw>
+<status status="PASS" starttime="20220416 06:23:08.686" endtime="20220416 06:23:11.022"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectCountryID}</arg>
+<arg>${correctCountry}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:23:11.023" level="INFO">Selecting options from selection list 'id:country-select' by value US.</msg>
+<status status="PASS" starttime="20220416 06:23:11.022" endtime="20220416 06:23:11.143"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${selectLanguageID}</arg>
+<arg>${correctLanguage}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220416 06:23:11.144" level="INFO">Selecting options from selection list 'id:language-select' by value en-US.</msg>
+<status status="PASS" starttime="20220416 06:23:11.143" endtime="20220416 06:23:11.167"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${countryLangsubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:11.168" level="INFO">Clicking button 'id:submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:23:11.167" endtime="20220416 06:23:11.345"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:23:11.345" endtime="20220416 06:23:12.590"/>
+</kw>
+<status status="PASS" starttime="20220416 06:23:08.686" endtime="20220416 06:23:12.590"/>
+</kw>
+<kw name="go to next page" library="login">
+<arg>${authTitle}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${emailTextField}</arg>
+<arg>${validUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:12.591" level="INFO">Typing text 'codechallengeadc@outlook.com' into text field 'id: loginForm-email-input'.</msg>
+<status status="PASS" starttime="20220416 06:23:12.591" endtime="20220416 06:23:14.111"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordTextField}</arg>
+<arg>${validPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:14.112" level="INFO">Typing password into text field 'id: loginForm-password-input'.</msg>
+<msg timestamp="20220416 06:23:14.146" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220416 06:23:14.373" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220416 06:23:14.111" endtime="20220416 06:23:14.373"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginSubmit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:14.373" level="INFO">Clicking button 'id: loginForm-submit-button'.</msg>
+<status status="PASS" starttime="20220416 06:23:14.373" endtime="20220416 06:23:14.585"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:23:14.585" endtime="20220416 06:23:15.039"/>
+</kw>
+<status status="PASS" starttime="20220416 06:23:12.591" endtime="20220416 06:23:15.039"/>
+</kw>
+<kw name="send code" library="verification">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${sendCodeButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:15.040" level="INFO">Clicking button 'id:twoFactor-step1-next-button'.</msg>
+<status status="PASS" starttime="20220416 06:23:15.040" endtime="20220416 06:23:15.088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${enterCodeTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:23:15.088" endtime="20220416 06:23:15.575"/>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>${verifyCodeButton}</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20220416 06:23:15.575" endtime="20220416 06:23:15.601"/>
+</kw>
+<status status="PASS" starttime="20220416 06:23:15.040" endtime="20220416 06:23:15.601"/>
+</kw>
+<kw name="go back" library="verification">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${goBackButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220416 06:23:15.601" level="INFO">Clicking button 'id:twoFactor-step2-back-button'.</msg>
+<status status="PASS" starttime="20220416 06:23:15.601" endtime="20220416 06:23:15.755"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${authTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220416 06:23:15.755" endtime="20220416 06:23:15.763"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${authURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220416 06:23:15.765" level="INFO">Current location is 'https://www.libreview.com/auth/finishlogin'.</msg>
+<status status="PASS" starttime="20220416 06:23:15.763" endtime="20220416 06:23:15.765"/>
+</kw>
+<status status="PASS" starttime="20220416 06:23:15.601" endtime="20220416 06:23:15.765"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220416 06:23:15.765" endtime="20220416 06:23:15.835"/>
+</kw>
+<status status="PASS" starttime="20220416 06:22:58.394" endtime="20220416 06:23:15.835"/>
+</test>
+<doc>UI Tests for LibreView
+1. Open browser
+2. Choose country and language
+3. Log in
+4. Send verification code
+5. Verify and Log in button disabled</doc>
+<status status="FAIL" starttime="20220416 06:17:58.886" endtime="20220416 06:23:15.836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="19" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="19" fail="1" skip="0" id="s1" name="Libre-View-Tests">Libre-View-Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
