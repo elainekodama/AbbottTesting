@@ -7,7 +7,7 @@ Library         SeleniumLibrary
 
 ${mainURL}           https://www.libreview.com/
 ${browser}           Chrome
-${driverPath}        /Users/elainekodama/Documents/Projects/AbbottTesting/chromedriver
+${driverPath}        ../AbbottTesting/chromedriver
 
 ${validUsername}     codechallengeadc@outlook.com
 ${validPassword}     P@ssword$12
